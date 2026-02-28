@@ -4,56 +4,80 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="css/styles.css"/>
 </head>
 <body>
-    
+  <!-- HEADER -->
     <header>
-        <a href="index.html">Happy Paws Donation Drive</a>
-        
-        <nav>
-            <ul>
-                <li><a class="nav-link" href="index.html">Home</a></li>
-                <li><a class="nav-link" href="about.html">About us</a></li>
-                <li><a class="nav-link" href="locations.html">Locations</a></li>
-                <li><a class="nav-link" href="how_Help.html">How to help</a></li>
-                <li><a class="nav-link" href="volunteer.html">Volunteer</a></li>
-            </ul>
-        </nav>
+        <nav class="navbar navbar-expand-lg bg-dark navbar-dark">
+            <div class="container">
+                <a class="navbar-brand" href="index.html">Happy Paws Donation Drive</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
+                    <div class="navbar-nav">
+                        <a class="nav-link" aria-current="page" href="index.html">Home</a>
+                        <a class="nav-link" href="about.html">About us</a>
+                        <a class="nav-link" href="locations.html">Locations</a>
+                        <a class="nav-link active" aria-current="page" href="how_Help.html">How to help</a>
+                        <a class="nav-link" href="volunteer.html">Volunteer</a>
+                    </div>
+                </div>
+            </div>
+        </nav> 
     </header>
         
     <main>
-        <h1>Get Involved</h1>
+        <h1 class="text-center py-3">Get Involved</h1>
+        <section>
+            
+            <div class="container">
+                <div class="row">
+                    <div class="col">
+                        <h2>Coming soon!</h2>
+                        <p>Stay tuned for more information</p>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
 
-     <!-- FOOTER -->
-    <footer>
-        <p>Happy Paws</p>
-
-        <div class="footer-nav">
-            <ul>
-                <li><a class="nav-link" href="index.html">Home</a></li>
-                <li><a class="nav-link" href="about.html">About us</a></li>
-                <li><a class="nav-link" href="locations.html">Locations</a></li>
-                <li><a class="nav-link" href="how_Help.html">How to help</a></li>
-                <li><a class="nav-link" href="volunteer.html">Volunteer</a></li>
-                <li><a href="contact.html">Contact Us</a></li>
-            </ul>
+  <!-- FOOTER -->
+  <footer class="footer fixed-bottom py-3 bg-light navbar-dark text-dark">
+    <div class="container">
+      <div class="row">
+        <div class="nav col-lg-4" id="footer-nav">
+          <ul>
+            <li><a class="nav-item" href="index.html">Home</a></li>
+            <li><a class="nav-item" href="about.html">About us</a></li>
+            <li><a class="nav-item" href="locations.html">Locations</a></li>
+            <li><a class="nav-item" href="how_Help.html">How to help</a></li>
+            <li><a class="nav-item" href="volunteer.html">Volunteer</a></li>
+            <li><a class="nav-item" href="contact.html">Contact Us</a></li>
+          </ul>
         </div>
 
-        <div class="footer-Contact">
-            <p>Do you have any questions? Let's get in touch!</p>
-            <p>Email us:<a href="mailto:infodrive@happypaws.org">infodrive@happypaws.org</a></p>
-            <p>Phone: <a href="tel:1231234567">+1 (123)123-4567 </a></p>
+        <div class="col-lg-4" id="footer-Contact">
+          <p>Do you have any questions? Let's get in touch!</p>
+          <p>Email us: <a href="mailto:infodrive@happypaws.org">infodrive@happypaws.org</a></p>
+          <p>Phone: <a href="tel:1231234567">+1 (123)123-4567 </a></p>
         </div>
-  
-        <div class="footer-socialmedia">
-            <p>Follow us</p>
-            <li>
-                <a href="https://www.facebook.com">Facebook</a>
-                <a href="https://www.Instagram.com">Instagram</a>
-                <a href="https://www.youtube.com">Youtube</a>
-            </li>
+
+        <div class="col-lg-4">
+          <p>Follow us</p>
+          <ul>
+            <li><a href="https://www.facebook.com">Facebook</a></li>
+            <li><a href="https://www.Instagram.com">Instagram</a></li>
+            <li><a href="https://www.youtube.com">Youtube</a></li>
+          </ul> 
         </div>
-    </footer>
+
+      </div>
+    </div>
+  </footer>
 </body>
 </html>
