@@ -27,3 +27,9 @@ h4{
     height: 75vh;
     object-fit: cover;
 }
+.form-label span, .error{
+    color: #E60000;
+}
+input.error-field, textarea.error-field {
+  border: 1px solid red;
+}

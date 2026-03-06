@@ -3,11 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Contact | Happy Paws Donation Drive</title>
     
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
 
     <link rel="stylesheet" href="css/styles.css"/>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script type="text/javascript" src="js/form-validation.js"></script>
+
 </head>
 <body>
   <!-- HEADER -->
@@ -37,6 +40,7 @@
         <section class="py-3">
             <div class="container">
                 <div class="row">
+                    <!-- Contact Info -->
                     <div class="col-12 col-sm-6 bg-body-secondary">
                         <h2>Contact information</h2>
                         <p>Email: <a href="mailto:infodrive@happypaws.org">infodrive@happypaws.org</a></p>
@@ -47,9 +51,9 @@
                         <h2>Let's get in touch</h2>
                         <p>Send us a message and we we'll respond within 24 hours.</p>
                     </div>
-
+                    <!-- Contact Form-->
                     <div class="col-12 col-sm-6">
-                        <div class="mb-3">
+                        <!--<div class="mb-3">
                             <label for="NameInput" class="form-label">Name</label>
                             <input type="text" class="form-control" id="NameInput" placeholder="First and last name">
                         </div>
@@ -64,17 +68,36 @@
                             <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
                         </div>
 
-                        <input type="submit" value="Send">
+                        <input type="submit" value="Send">-->
+                        <form id="contactForm">
+                            <div class="mb-3">
+                                <label for="name" class="form-label"><span>* </span>Name:</label>
+                                <input type="text" class="form-control" id="name" name="name"
+                                placeholder="First and Last name">
+                                <span class="error" id="nameError"></span>
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="email" class="form-label"><span>*</span>Email:</label>
+                                <input type="text" class="form-control" id="email" name="email"
+                                placeholder="name@example.com">
+                                <span class="error" id="emailError"></span>                                
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="message" class="form-label"><span>*</span>Message:</label>
+                                <textarea class="form-control" id="message" rows="3" name="message"></textarea>
+                                <span class="error" id="messageError"></span>
+                            </div>
+
+                            <button type="submit" class="btn btn-secondary" id="submitBtn">Submit</button>
+                        </form>
+                        <div id="SuccessFeedback"></div>
                     </div>
                 </div>
             </div>
         </section>
         
-
-        
-
-        
-
 
     </main>
 
