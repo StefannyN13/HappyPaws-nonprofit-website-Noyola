@@ -7,7 +7,14 @@
     
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Raleway:ital,wght@0,100..900;1,100..900&family=SN+Pro:ital,wght@0,200..900;1,200..900&family=Sour+Gummy:ital,wght@0,100..900;1,100..900&family=Zen+Dots&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="css/styles.css"/>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script type="text/javascript" src="js/form-validation.js"></script>
+
 </head>
 <body>
   <!-- HEADER -->
@@ -22,8 +29,8 @@
                     <div class="navbar-nav">
                         <a class="nav-link" aria-current="page" href="index.html">Home</a>
                         <a class="nav-link" href="about.html">About us</a>
-                        <a class="nav-link" href="locations.html">Locations</a>
                         <a class="nav-link" href="how_Help.html">How to help</a>
+                        <a class="nav-link" href="locations.html">Locations</a>
                         <a class="nav-link active" aria-current="page" href="volunteer.html">Volunteer</a>
                     </div>
                 </div>
@@ -34,6 +41,15 @@
     <!-- MAIN CONTENT -->
     <main>
       <h1 class="text-center py-3">Become a Volunteer</h1>
+      <section class="bg-body-secondary p-4">
+        <div class="container">
+          <div class="row">
+            <div class="col">
+              <p>Volunteers play an important role in making this donation drive successful. By donating your time, you help collect, organize, and deliver essential supplies to local animal shelters. Even a few hours of your time can make a big difference.</p>
+            </div>
+          </div>
+        </div>
+      </section>
       <section class="py-3">
           <div class="container">
             <div id="VolunteerCarousel" class="carousel slide" data-bs-ride="carousel">
@@ -90,11 +106,51 @@
 
           </div>
       </section>
+      <!--More info-->
+      <section class="p-5">
+        <div class="container">
+          <div class="row">
+            <div class="col-12 col-lg-6">
+              <h2>Interested in volunteering?</h2>
+              <p>Thank you for your interest in volunteering for our donation drive. Volunteers help collect, organize, and prepare donated supplies that will be delivered to local animal shelters.</p>
+              <p>If you would like to volunteer, please fill out the form below. In your message, let us know:</p>
+            </div>
+          
+            <!-- Contact Form-->
+              <div class="col-12 col-lg-6 p-4">
+                <form id="contactForm">
+                  <div class="mb-3">
+                    <label for="name" class="form-label"><span>* </span>Name:</label>
+                    <input type="text" class="form-control" id="name" name="name"
+                    placeholder="First and Last name">
+                    <span class="error" id="nameError"></span>
+                  </div>
+
+                  <div class="mb-3">
+                    <label for="email" class="form-label"><span>* </span>Email:</label>
+                    <input type="text" class="form-control" id="email" name="email"
+                      placeholder="name@example.com">
+                    <span class="error" id="emailError"></span>                                
+                  </div>
+
+                  <div class="mb-3">
+                    <label for="message" class="form-label"><span>* </span>Message:</label>
+                    <textarea class="form-control" id="message" rows="3" name="message"></textarea>
+                    <span class="error" id="messageError"></span>
+                  </div>
+
+                    <button type="submit" class="btn btn-secondary" id="submitBtn">Submit</button>
+                </form>
+                <div id="SuccessFeedback"></div>
+              </div>
+          </div>
+        </div>
+      </section>
         
     </main>
 
    <!-- FOOTER -->
-  <footer class="py-3 bg-light navbar-dark text-dark">
+  <footer class="footer mt-auto py-3 bg-light navbar-light text-dark">
     <div class="container">
       <div class="row">
         <div class="nav col-lg-4" id="footer-nav">
