@@ -91,3 +91,8 @@ a.nav-link.active {
     max-width: 350px;
     width: 100%;
 }
+
+#bar{
+    background-color: #1b66d6;
+    color: white;
+}

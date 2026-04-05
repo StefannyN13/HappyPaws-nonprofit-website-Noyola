@@ -21,17 +21,17 @@
   <header>
     <nav class="navbar navbar-expand-lg bg-dark navbar-dark">
       <div class="container">
-        <a class="navbar-brand" href="index.html">Happy Paws Donation Drive</a>
+        <a class="navbar-brand" href="index.php">Happy Paws Donation Drive</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
           <div class="navbar-nav">
-            <a class="nav-link active" aria-current="page" href="index.html">Home</a>
-            <a class="nav-link" href="about.html">About us</a>
-            <a class="nav-link" href="how_Help.html">How to help</a>
-            <a class="nav-link" href="locations.html">Locations</a>
-            <a class="nav-link" href="volunteer.html">Volunteer</a>
+            <a class="nav-link active" aria-current="page" href="index.php">Home</a>
+            <a class="nav-link" href="about.php">About us</a>
+            <a class="nav-link" href="how_Help.php">How to help</a>
+            <a class="nav-link" href="locations.php">Locations</a>
+            <a class="nav-link" href="volunteer.php">Volunteer</a>
           </div>
         </div>
       </div>
@@ -40,6 +40,39 @@
 
   <!-- MAIN CONTENT-->    
   <main>
+    <!-- BAR -->
+    <section id="bar">
+      <div class="container text-center">
+        <div class="row p-1 ">
+          <div class="col-12">
+            <?php
+              //Count down days to next Donnation Drive
+              $nextDate = new DateTime("2026-05-12 00:10:00");
+              $currentDate = new DateTime();
+
+              $countDown = $currentDate->diff($nextDate);
+              
+              // Custom greeting based on time
+              date_default_timezone_set('America/Chicago');
+              $hour=date('H');
+
+              if ($hour < 12){
+                $greeting="Good Morning!";
+              }
+              elseif ($hour >12 & $hour < 18){
+                $greeting="Goof afternoon!";
+              }
+              else {
+                $greeting="Good evening!";
+              }
+
+              echo "$greeting Our next Donation Drive will be in ".$countDown->format('%a days, %h hours, %i minutes');
+            ?>  
+          </div>
+        </div>
+      </div>
+    </section>
+    
     <!-- HERO SECTION -->
     <section class="hero py-5 px-4" id="hero">
       <div class="container">
@@ -48,11 +81,11 @@
             <p>Happy Paws Community Drive 2026</p>
             <h1>Helping Our Buddies Feel <span>Safe</span> and <span>Loved</span></h1>
             <p>A Community Donation Drive Supporting Our Furry Friends from Local Animal Shelters in Will County</p>
-            <a class="btn btn-primary" href="how_Help.html" role="button">Donate</a>
-            <a class="btn btn-outline-secondary mx-1" href="volunteer.html" role="button">Volunteer</a>
+            <a class="btn btn-primary" href="how_Help.php" role="button">Donate</a>
+            <a class="btn btn-outline-secondary mx-1" href="volunteer.php" role="button">Volunteer</a>
           </div>
 
-          <div class="col-12 col-sm-6">
+          <div class="col-12 col-lg-6">
             <img src="images/Dog-shelter-smile.jpg" class="img-fluid shadow rounded-5" alt="Smiley woman playing at shelter with dog">
           </div>
 
@@ -129,7 +162,7 @@
               <li>Towels</li>
               <li>Toys and Accessories</li>
             </ul>
-            <a class="btn btn-outline-secondary" href="how_Help.html" role="button">View Full Donation List</a>
+            <a class="btn btn-outline-secondary" href="how_Help.php" role="button">View Full Donation List</a>
           </div>
         </div>
       </div>
@@ -156,12 +189,12 @@
       <div class="row">
         <div class="nav col-lg-4" id="footer-nav">
           <ul>
-            <li><a class="nav-item" href="index.html">Home</a></li>
-            <li><a class="nav-item" href="about.html">About us</a></li>
-            <li><a class="nav-item" href="locations.html">Locations</a></li>
-            <li><a class="nav-item" href="how_Help.html">How to help</a></li>
-            <li><a class="nav-item" href="volunteer.html">Volunteer</a></li>
-            <li><a class="nav-item" href="contact.html">Contact Us</a></li>
+            <li><a class="nav-item" href="index.php">Home</a></li>
+            <li><a class="nav-item" href="about.php">About us</a></li>
+            <li><a class="nav-item" href="locations.php">Locations</a></li>
+            <li><a class="nav-item" href="how_Help.php">How to help</a></li>
+            <li><a class="nav-item" href="volunteer.php">Volunteer</a></li>
+            <li><a class="nav-item" href="contact.php">Contact Us</a></li>
           </ul>
         </div>
 
